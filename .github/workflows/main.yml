@@ -22,6 +22,9 @@ jobs:
       - name: Move to flask folder
         run: |
           cd app
+      - name: Run pytest coverage
+        run: |
+          pipenv run pytest --cov=app
       - name: Run test suite
         run: |
           pipenv run pytest
